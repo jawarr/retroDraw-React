@@ -40,9 +40,15 @@ const App = () => {
       activeColor={activeColor}
       setActiveColor={setActiveColor}/>
     {/* Grid needs to be passed activeColor, cellList, and setCellList */}
-    <Grid />
+    <Grid 
+      activeColor={activeColor}
+      cellList={cellList}
+      setCellList={setCellList}/>
     {/* ActionPanel needs to be passed activeColor, cellList, and setCellList */}
-    <ActionPanel />
+    <ActionPanel 
+      activeColor={activeColor}
+      cellList={cellList}
+      setCellList={setCellList}/>
   </div>
 }
 
