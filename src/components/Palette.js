@@ -13,7 +13,7 @@ const Palette = ({ activeColor, setActiveColor }) => {
   /**
    * Create constants for activeColor and setActiveColor, reading the value off of the props
    */
-  
+
 
   /**
    * For the template, you need to:
@@ -28,13 +28,13 @@ const Palette = ({ activeColor, setActiveColor }) => {
   return <div className="palette">
     {COLORS.map((color, i) => {
       return (
-        <Cell 
-          key={i} 
+        <Cell
+          key={`palette-${i}`}
           color={color}
           isActive={activeColor === color ? true : false}
-          handleClick={() => setActiveColor(color)}/>
+          handleClick={() => setActiveColor(color)} />
       )
-  })}
+    })}
   </div>
 }
 

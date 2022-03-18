@@ -12,7 +12,7 @@ const Grid = ({ activeColor, cellList, setCellList }) => {
    * Create constants for activeColor, cellList, and setCellList, reading the value off of the props
    */
 
-  
+
   /**
    * For the template you need to:
    * - map over the cellList
@@ -29,18 +29,18 @@ const Grid = ({ activeColor, cellList, setCellList }) => {
     <div className="grid">
       {cellList.map((cell, i) => {
         return (
-        <Cell 
-          key={i}
-          color={cell.color}
-          handleClick={()=> {
-            const newCellList = [...cellList]
-            cell.color = activeColor
-            setCellList([...cellList, newCellList])
-          }}/>
+          <Cell
+            key={`grid-${i}`}
+            color={cell.color}
+            handleClick={() => {
+              const newCellList = [...cellList]
+              newCellList[i].color = activeColor
+              setCellList(newCellList)
+            }} />
         )
       })}
     </div>
-  ) 
+  )
 }
 
 export default Grid;

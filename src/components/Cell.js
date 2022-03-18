@@ -22,13 +22,13 @@ const Cell = ({ color, isActive, handleClick }) => {
    *    passed in with the props
    */
   return (
-    <div 
-      className={isActive ? "cell active" : "cell"} 
-      style={{backgroundColor:`${color}`}}
-      onClick={() => {handleClick()}}>
-        
+    <div
+      className={isActive ? "cell active" : "cell"}
+      style={{ backgroundColor: color }}
+      onClick={handleClick}>
+
     </div>
-  ) 
-  }
+  )
+}
 
 export default Cell;
